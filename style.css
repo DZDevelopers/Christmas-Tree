@@ -1,0 +1,127 @@
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('fonts/MyCustomFont.ttf') format('truetype');
+  font-display: swap;
+}
+
+body {
+  font-family: 'MyCustomFont';
+  background-image: url("img/backgroundtile.png");
+  background-color: #0a0a0a;
+  color: azure;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+#snow-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* snowflake already fine */
+.snowflake {
+  position: absolute;
+  top: -60px;
+  color: white;
+  user-select: none;
+  pointer-events: none;
+  text-shadow: 0 0 8px white;
+  animation-name: fall, drift;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+/* Tree section */
+#tree-container {
+  max-width: 25rem;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure star always sits above ornaments and is clickable */
+#star {
+  cursor: pointer;
+  font-size: 5rem;
+  z-index: 999;       /* <<< big z-index so ornaments don't cover it */
+  transition: transform 0.2s;
+  pointer-events: auto;
+}
+
+#star:hover {
+  transform: scale(1.2);
+}
+
+#tree {
+  width: 20rem;
+  z-index: 1;
+  margin-top: -1rem;
+}
+
+/* Decorations overlay that matches container size */
+#decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none; /* container won't block pointer events */
+}
+
+/* Ornaments: center them on their coordinate and do NOT capture clicks */
+.ornament {
+  height: 2.5rem;
+  position: absolute;
+  z-index: 10;
+  transform: translate(-50%, -50%); /* center at left/top coordinates */
+  pointer-events: none;             /* don't block clicks on star */
+}
+
+#header, #footer {
+  text-align: center;
+}
+
+#tree-container {
+  max-width: 25rem;
+  margin: 2rem auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#star {
+  cursor: pointer;
+  font-size: 5rem;
+  z-index: 5;
+  transition: transform 0.2s;
+}
+
+#star:hover {
+  transform: scale(1.2);
+}
+
+#tree {
+  width: 20rem;
+  z-index: 1;
+  margin-top: -1rem;
+}
+
+#decorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.ornament {
+  height: 2.5rem;
+  position: absolute;
+  z-index: 10;
+}
+
+.important-text {
+  color: #5bc0de;
+}
