@@ -1,31 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
     <title>Haxmas Day 7</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Snow: give it the expected id -->
-    <div id="snow-container"></div>
-
-    <div id="header">
-        <h1>Haxmas Day <span style="font-weight: normal;">7</span></h1>
-        <span style="font-weight: normal;"><h2 id="date"></h2></span>
+    <link rel="stylesheet" href="style.css">  
+</head> 
+<body>  
+    <div id="header">  
+        <h1 class="important-text">Haxmas Day 7</h1>  
+        <h2 id="date">December 19, 2025</h2>  
     </div>
-
-    <div id="tree-container">
-        <div id="star" role="button" aria-label="Change star">⭐</div>
-        <img src="img/tree.png" id="tree" alt="Christmas Tree">
-        <div id="decorations"></div>
+    <div id="tree-container" class="container">  
+	    <img src="img/tree.png" id="tree">  
+	        <div id="star">⭐</div>  
+		        <div id="decorations">  
+					
+			    </div>
+	        </div>
+        <div id="footer">  
+        <h2 class="important-text">Made by AymenD</h2>  
     </div>
-
-    <div id="footer">
-        <h1 class="important-text">By Yours Truly AymenD.</h1>
-    </div>
-
-    <script src="script.js"></script>
-</body>
+    <script src="script.js">
+    js
+    const date = new Date();
+    const days = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    </script>
+</body>  
 </html>
